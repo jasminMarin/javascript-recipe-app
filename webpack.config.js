@@ -2,8 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "none",
+  mode: 'development',
   entry: './src/js/index.js',
+  devtool: 'inline-source-map',
   output: {
     filename: 'js/main.js',
     path: path.resolve(__dirname, 'docs'),
@@ -13,8 +14,9 @@ module.exports = {
   },
   plugins: [
     // new HtmlWebpackPlugin(), // Generates default index.html
-    new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'index.html',
+    new HtmlWebpackPlugin({  
+      title: 'Development',
+      filename: 'index.html', // Also generate a test.html
       template: 'src/index.html'
     })
   ],
