@@ -3,7 +3,6 @@ import { elements } from "./base";
 export const getInput = () => elements.searchInput.value;
 
 const renderRecipe = (recipe) => {
-    console.log(recipe);
     const markup = `
     <li>
     <a class="results__link" href="#${recipe.recipe_id}">
